@@ -1,0 +1,71 @@
+/* client/src/App.css */
+
+
+
+
+/* You can style the links themselves to look like buttons or plain text */
+nav a {
+  text-decoration: none; /* Removes the underline from links */
+  color: #25aaf1;           /* Sets a color */
+  font-weight: bold;     /* Makes the text bold */
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1148fe;
+}
+
+/* The main App container */
+.App {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center;     /* Centers items vertically */
+  height: 100vh;           /* Sets the container height to the full viewport height */
+  text-align: center;
+  flex-direction: column;  /* Stacks items vertically */
+}
+
+/* The container for each form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Basic form styling to make it look clean */
+.form-container form {
+  width: 100%;
+}
+
+/* Styling for the input fields */
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+/* Styling for the buttons */
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
