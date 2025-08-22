@@ -28,7 +28,7 @@ const Login = () => {
       const body = { email, password };
       
       // Make the POST request to the login API endpoint.
-      const res = await axios.post('http://localhost:5000/api/auth/login', body);
+      const res = await axios.post('http://localhost:8000/api/auth/login', body);
       
       // --- Success Handling ---
       // On success, the backend returns a JWT token.

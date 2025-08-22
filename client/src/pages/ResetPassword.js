@@ -30,7 +30,7 @@ const ResetPassword = () => {
 
     try {
       // The API call uses the `token` from the URL to identify the user.
-      const res = await axios.post(`http://localhost:5000/api/auth/reset-password/${token}`, { password });
+      const res = await axios.post(`http://localhost:8000/api/auth/reset-password/${token}`, { password });
       setMessage(res.data.msg);
       
       // Redirect to the login page after a short delay so the user can see the success message.

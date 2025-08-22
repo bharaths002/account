@@ -1,13 +1,14 @@
-// server/utils/db.js
-import mongoose from "mongoose";
+import 'dotenv/config';
+import mongoose from 'mongoose';
 
 const dbCon = async () => {
     try {
-        await mongoose.connect(process.env.DB_URL)
-        console.log('Mongodb is conntected')
+        await mongoose.connect(process.env.DB_URL);
+        console.log('Mongodb is conntected');
     } catch (error) {
-        console.log(error)
+        console.error(error);
+        process.exit(1);
     }
-}
+};
 
 export default dbCon;
