@@ -13,8 +13,8 @@ app.use('/api/auth', authRoutes);
 
 console.log('DB_URL:', process.env.DB_URL);
 
-console.log('EMAIL_USER:', process.env.EMAIL_USER); // <--- Add this
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS); // <-- Add this line
+console.log('EMAIL_USER:', process.env.EMAIL_USER);
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS); 
 
 dbCon();
 
