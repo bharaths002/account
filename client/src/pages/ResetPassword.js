@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const ResetPassword = () => {
-  // `useParams` is used to access the URL parameters, specifically the reset token.
+  
   const { token } = useParams();
   const navigate = useNavigate();
 
@@ -29,11 +29,10 @@ const ResetPassword = () => {
     }
 
     try {
-      // The API call uses the `token` from the URL to identify the user.
+      
       const res = await axios.post(`http://localhost:8000/api/auth/reset-password/${token}`, { password });
       setMessage(res.data.msg);
       
-      // Redirect to the login page after a short delay so the user can see the success message.
       setTimeout(() => navigate('/login'), 3000);
     } catch (err) {
       setError(err.response?.data?.msg || 'Password reset failed. The link might be invalid or expired.');
