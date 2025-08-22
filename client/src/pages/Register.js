@@ -25,19 +25,17 @@ const Register = () => {
   });
 
   const onSubmit = async e => {
-    e.preventDefault(); // Prevents the default browser behavior of reloading the page on form submission.
-
-    // Clear any previous messages before starting a new submission.
+    e.preventDefault(); 
     setMessage('');
     setError('');
 
     if (password !== confirmPassword) {
-      setError('Passwords do not match.'); // Set an error message if they don't match.
-      return; // Stop the function here.
+      setError('Passwords do not match.'); 
+      return; 
     }
 
     try {
-      // Prepare the data to be sent to the backend.
+      
       const body = { name, email, password };
 
       const res = await axios.post('http://localhost:8000/api/auth/register', body);
