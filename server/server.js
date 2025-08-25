@@ -1,18 +1,20 @@
-const express = require('express');
-const cors = require('cors');
-const dbCon = require('./utils/db.js');
-const authRoutes = require('./routes/auth-routes.js');
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import dbCon from './utils/db.js';
+import authRoutes from './routes/auth.js';
 
 const app = express();
 
-app.use(cors({ origin: 'https://[your-frontend-service-name].onrender.com' }));
+app.use(cors({ origin: 'https://[your-frontend-service-name].onrender.com' })); //for deployment 
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 
 console.log('DB_URL:', process.env.DB_URL);
-console.log('EMAIL_USER:', process.env.EMAIL_USER);
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
+
+console.log('EMAIL_USER:', process.env.EMAIL_USER); // <--- Add this
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS); // <-- Add this line
 
 dbCon();
 
