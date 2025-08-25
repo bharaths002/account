@@ -6,7 +6,7 @@ import authRoutes from './routes/auth.js';
 
 const app = express();
 
-app.use(cors({ origin: 'https://[your-frontend-service-name].onrender.com' }));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
