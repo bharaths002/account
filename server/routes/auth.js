@@ -6,19 +6,17 @@ import User from '../models/User.js';
 
 const router = express.Router();
 
-// Nodemailer transporter setup to send emails
 const transporter = nodemailer.createTransport({
     host: "smtp.ethereal.email",
     port: 587,
-    secure: false, // Use 'true' for port 465, 'false' for other ports
+    secure: false, 
     auth: {
         user: 'candace44@ethereal.email',
         pass: 'Gm3xR4HSU2evHSeSEp',
     },
 });
 
-// @route   POST /auth/register
-// @desc    Register a new user
+
 router.post('/register', async (req, res) => {
     const { name, email, password } = req.body;
     try {
@@ -52,8 +50,7 @@ router.post('/register', async (req, res) => {
     }
 });
 
-// @route   POST /auth/login
-// @desc    Authenticate user & get token
+
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
     try {
@@ -87,8 +84,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// @route   GET /auth/verify/:token
-// @desc    Verify a user's email
+
 router.get('/verify/:token', async (req, res) => {
     try {
         const decoded = jwt.verify(req.params.token, process.env.JWT_SECRET);
@@ -109,8 +105,7 @@ router.get('/verify/:token', async (req, res) => {
     }
 });
 
-// @route   POST /auth/forgot-password
-// @desc    Send password reset link to user's email
+
 router.post('/forgot-password', async (req, res) => {
     const { email } = req.body;
     try {
@@ -139,8 +134,7 @@ router.post('/forgot-password', async (req, res) => {
     }
 });
 
-// @route   POST /auth/reset-password/:token
-// @desc    Reset user's password using the token
+
 router.post('/reset-password/:token', async (req, res) => {
     const { password } = req.body;
     try {

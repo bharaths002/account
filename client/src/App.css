@@ -1,13 +1,8 @@
-/* client/src/App.css */
-
-
-
-
-/* You can style the links themselves to look like buttons or plain text */
+//styling
 nav a {
-  text-decoration: none; /* Removes the underline from links */
-  color: #25aaf1;           /* Sets a color */
-  font-weight: bold;     /* Makes the text bold */
+  text-decoration: none; 
+  color: #25aaf1;           
+  font-weight: bold;     
 }
 
 .form-title {
@@ -16,17 +11,15 @@ nav a {
   color: #1148fe;
 }
 
-/* The main App container */
 .App {
   display: flex;
-  justify-content: center; /* Centers items horizontally */
-  align-items: center;     /* Centers items vertically */
-  height: 100vh;           /* Sets the container height to the full viewport height */
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
   text-align: center;
-  flex-direction: column;  /* Stacks items vertically */
+  flex-direction: column;  
 }
 
-/* The container for each form */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -40,22 +33,19 @@ nav a {
   width: 100%;
 }
 
-/* Basic form styling to make it look clean */
 .form-container form {
   width: 100%;
 }
 
-/* Styling for the input fields */
 .form-container input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  box-sizing: border-box; 
 }
 
-/* Styling for the buttons */
 .form-container button {
   width: 100%;
   padding: 10px;

@@ -2,26 +2,20 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
-  const navigate = useNavigate(); // Hook for redirection.
+  const navigate = useNavigate(); 
 
-  // `useEffect` runs code after the component renders. It's perfect for checking
-  // for a token and handling the redirection logic.
   useEffect(() => {
-    // Get the token from local storage.
     const token = localStorage.getItem('token');
 
-    // If the token doesn't exist, redirect the user to the login page.
     if (!token) {
       navigate('/login');
     }
-  }, [navigate]); // The dependency array ensures this effect runs only when the component mounts.
+  }, [navigate]); 
+  
 
-  // This function handles logging the user out.
   const onLogout = () => {
-    // Remove the token from local storage. This is how we "log out" the user.
     localStorage.removeItem('token');
     
-    // Redirect the user back to the login page.
     navigate('/login');
   };
 
